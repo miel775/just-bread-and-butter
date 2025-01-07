@@ -1,0 +1,16 @@
+* {
+    background-color: var(--background-color-dark);
+}
+
+.logo {
+    color: var( --background-color-light);
+}
+
+.breadandbutter img:nth-child(1) {
+    display: none;
+    align-content: center;
+}
+
+.slideshowfront {
+    display: none;
+}

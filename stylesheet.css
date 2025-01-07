@@ -1,0 +1,29 @@
+* {
+    /* background color */
+    --background-color-dark: #000;
+    --background-color-light: #FFF;
+
+    /* selection color */
+    --color-1: #0064FF;
+    --color-2: #FFc852;
+    --color-3: #FF7A41;
+    --color-4: #A560FF;
+    --color-5: #00C46D;
+    --color-6: #F3A0D6;
+
+    /* fonts */
+    --general-font-1: Antique Legacy;
+    --general-font-2: Antique-light;
+    --logo-font: OffBit;
+
+    /* font sizes */
+    --h1: 91px;
+    --h2: 44px;
+    --h3: 26px;
+    --h4: 24px;
+    --h5: 20px;
+    --p: 18px;
+
+    /* general */
+    --border-radius: 30px;
+}
