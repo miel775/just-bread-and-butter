@@ -17,13 +17,14 @@
     --logo-font: OffBit;
 
     /* font sizes */
-    --h1: 91px;
-    --h2: 44px;
-    --h3: 26px;
-    --h4: 24px;
-    --h5: 20px;
-    --p: 18px;
+    --f1: 120px;
+    --f2: 91px;
+    --f3: 26px;
+    --f4: 24px;
+    --f5: 20px;
+    --f6: 18px;
 
     /* general */
     --border-radius: 30px;
+    --animation-duration: 0.3s;
 }
