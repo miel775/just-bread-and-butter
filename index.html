@@ -4,54 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bread and Butter</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/stylesheet.css">
 
-
+    <script src="script/script.js" defer></script>
 </head>
 <header>
     
-    <img src="Assets FDND 2025/Overig/just-logo.svg" alt="Logo van JUST bedrijf">
+    <img src="assets/Overig/just-logo.svg" class="logo">
 
 
-    <!-- mobile dark/light butto maar werkt niet!!
-    <button class="sunbutton">
-        <img src="assets-student/sun.svg">
-    </button>
-
-    <button class="moonbutton">
-        <img src="assets-student/moon.svg">
-    </button>
-
-     <label class="switch">
-        <input type="checkbox">
-        <span class="slider"></span>
-     </label>
-    -->
+    <!-- source universe.io -->
+    <label for="theme" class="theme">
+            <input id="theme" class="theme-toggle"
+            type="checkbox" role="switch" name="theme" value="dark">
+            </span>
+            <!-- waarom worden deze niet transparant op de achtergrond? -->
+            <img src="assets-student/moon.svg" class="moonicon">
+            <img src="assets-student/sun.svg" class="sunicon">
+        </span>
+    </label>
 
 </header>
 <body>
 
-    <section>
+    <section class="banner">
             <!-- slideshow front page -->
      <!-- Hier moeten nog alt-texten bij -->
-    <div class="slideshowfront">
-        <img src="Assets FDND 2025/Images/0a090e44-2dbc-4675-a7ac-ae48399152b2.JPG" alt="foto vanuit publiek waar een vrouw de titelpagina presenteert">
-        <img src="Assets FDND 2025/Images/1aa98921-a025-4ee3-a34c-808cdfea5533.JPG" alt="foto van twee vrouwen waarvan er 1 in een doos kijkt">
-        <img src="Assets FDND 2025/Images/1cd49476-e5b4-441a-9373-59b9d6469489.JPG" alt="foto van publiek">
-        <img src="Assets FDND 2025/Images/4ee27e5b-c719-4d25-b718-e815a5aac952.JPG" alt="vrouw en man bereiden zich voor op de presentatie">
-        <img src="Assets FDND 2025/Images/4f3858a1-4599-4bd7-9325-164715a760b8.JPG" alt="foto van het publiek vanuit podiumsperspectief">
-        <img src="Assets FDND 2025/Images/59ff4d18-363f-4ae9-bfac-c07a89d65514.JPG" alt="man spreekt op een podium hoger perspectief en wijst naar scherm">
-        <img src="Assets FDND 2025/Images/a31863f5-ab8d-4261-bec0-00ee5cab3ebf.JPG" alt="man spreekt op een podium hoger perspectief">
-        <img src="Assets FDND 2025/Images/bb089490-7800-44b8-a39a-38845efc7642.JPG" alt="man spreekt op een podium">
-        <img src="Assets FDND 2025/Images/de44e76e-a491-47d3-b3c2-ab071a32952f.JPG" alt="man staat met camera">
-    </div>
+    <div class="slideshowfront"> </div>
 
     <div class="breadandbutter">
-        <img src="Assets FDND 2025/Overig/b&b-black.svg">
-        <img src="Assets FDND 2025/Overig/b&b-white.svg">
+        <img src="assets/Overig/b&b-black.svg">
+        <img src="assets/Overig/b&b-white.svg">
     </div>
-
     </section>
 
     <section>
@@ -79,20 +64,6 @@
                 Additionally, websites that prioritize accessibility tend to rank higher on Google, as search engines reward sites with better usability and structure. This improved SEO translates to greater visibility, helping you reach more potential customers. 
                 Ultimately, by embracing accessibility, you not only foster inclusivity but also enjoy higher conversion rates, as more users can engage seamlessly with your content or services.</p>
     </section>
-    
-    <article class="Fotocarrousel">
-        <!-- Fotocarrousel -->
-         <!-- vertalen naar het engels -->
-        <img src="Assets FDND 2025/Images/0a090e44-2dbc-4675-a7ac-ae48399152b2.JPG" alt="Presentation Bread and Butter">
-        <img src="Assets FDND 2025/Images/1aa98921-a025-4ee3-a34c-808cdfea5533.JPG" alt="Looking in a box">
-        <img src="Assets FDND 2025/Images/1cd49476-e5b4-441a-9373-59b9d6469489.JPG" alt="Audience">
-        <img src="Assets FDND 2025/Images/4ee27e5b-c719-4d25-b718-e815a5aac952.JPG" alt="Preperations Bread and Butter">
-        <img src="Assets FDND 2025/Images/4f3858a1-4599-4bd7-9325-164715a760b8.JPG" alt="Audience">
-        <img src="Assets FDND 2025/Images/59ff4d18-363f-4ae9-bfac-c07a89d65514.JPG" alt="Presentation Bread and Butter">
-        <img src="Assets FDND 2025/Images/a31863f5-ab8d-4261-bec0-00ee5cab3ebf.JPG" alt="Presentation Bread and Butter">
-        <img src="Assets FDND 2025/Images/bb089490-7800-44b8-a39a-38845efc7642.JPG" alt="Presentation Bread and Butter">
-        <img src="Assets FDND 2025/Images/de44e76e-a491-47d3-b3c2-ab071a32952f.JPG" alt="Audience">
-    </article>
 
     <section>
         <h2>Join our next events</h2>
@@ -107,30 +78,30 @@
 
     <!-- All stickers -->
     <article class="stickerselection">
-        <img src="Assets FDND 2025/Svg's/!!!.svg" alt="exclamation mark sticker">
-        <img src="Assets FDND 2025/Svg's/100�.svg" alt="100 procent sticker">
-        <img src="Assets FDND 2025/Svg's/Accessible.svg" alt="Good Design sticker">
-        <img src="Assets FDND 2025/Svg's/Agenda.svg" alt="Agenda sticker">
-        <img src="Assets FDND 2025/Svg's/Arrow.svg" alt="Arrow sticker">
-        <img src="Assets FDND 2025/Svg's/Cheers.svg" alt="Cheers sticker">
-        <img src="Assets FDND 2025/Svg's/Coffee Time.svg" alt="Coffee Time Sticker">
-        <img src="Assets FDND 2025/Svg's/End with Magic.svg" alt="End with Magic Sticker">
-        <img src="Assets FDND 2025/Svg's/errow-warning.svg" alt="Errow Warning Sticker">
-        <img src="Assets FDND 2025/Svg's/Feedback Please.svg" alt="Feedback Please Sticker">
-        <img src="Assets FDND 2025/Svg's/Happy Face.svg" alt="Happy Face Sticker">
-        <img src="Assets FDND 2025/Svg's/Hashtag.svg" alt="Hashtag Sticker">
-        <img src="Assets FDND 2025/Svg's/High Five.svg" alt="Highfive Sticker">
-        <img src="Assets FDND 2025/Svg's/Hive Mind.svg" alt="Hive Mind Sticker">
-        <img src="Assets FDND 2025/Svg's/Let's do it.svg" alt="Let's do it Sticker">
-        <img src="Assets FDND 2025/Svg's/Let's Start.svg" alt="Let's start Sticker">
-        <img src="Assets FDND 2025/Svg's/Let's talk.svg" alt="Let's talk Sticker">
-        <img src="Assets FDND 2025/Svg's/Newbie.svg" alt="Newbie Sticker">
-        <img src="Assets FDND 2025/Svg's/Questionmark.svg" alt="Question mark Sticker">
-        <img src="Assets FDND 2025/Svg's/Quiz.svg" alt="Quiz Sticker">
-        <img src="Assets FDND 2025/Svg's/Recap.svg" alt="recap Sticker">
-        <img src="Assets FDND 2025/Svg's/Sad Face.svg" alt="Sad Face Sticker">
-        <img src="Assets FDND 2025/Svg's/Start with Logic.svg" alt="Start with logic Sticker">
-        <img src="Assets FDND 2025/Svg's/Yesss.svg" alt="Yes Sticker">
+        <img src="assets/Svg's/!!!.svg" alt="exclamation mark sticker">
+        <img src="assets/Svg's/100�.svg" alt="100 procent sticker">
+        <img src="assets/Svg's/Accessible.svg" alt="Good Design sticker">
+        <img src="assets/Svg's/Agenda.svg" alt="Agenda sticker">
+        <img src="assets/Svg's/Arrow.svg" alt="Arrow sticker">
+        <img src="assets/Svg's/Cheers.svg" alt="Cheers sticker">
+        <img src="assets/Svg's/Coffee Time.svg" alt="Coffee Time Sticker">
+        <img src="assets/Svg's/End with Magic.svg" alt="End with Magic Sticker">
+        <img src="assets/Svg's/errow-warning.svg" alt="Errow Warning Sticker">
+        <img src="assets/Svg's/Feedback Please.svg" alt="Feedback Please Sticker">
+        <img src="assets/Svg's/Happy Face.svg" alt="Happy Face Sticker">
+        <img src="assets/Svg's/Hashtag.svg" alt="Hashtag Sticker">
+        <img src="assets/Svg's/High Five.svg" alt="Highfive Sticker">
+        <img src="assets/Svg's/Hive Mind.svg" alt="Hive Mind Sticker">
+        <img src="assets/Svg's/Let's do it.svg" alt="Let's do it Sticker">
+        <img src="assets/Svg's/Let's Start.svg" alt="Let's start Sticker">
+        <img src="assets/Svg's/Let's talk.svg" alt="Let's talk Sticker">
+        <img src="assets/Svg's/Newbie.svg" alt="Newbie Sticker">
+        <img src="assets/Svg's/Questionmark.svg" alt="Question mark Sticker">
+        <img src="assets/Svg's/Quiz.svg" alt="Quiz Sticker">
+        <img src="assets/Svg's/Recap.svg" alt="recap Sticker">
+        <img src="assets/Svg's/Sad Face.svg" alt="Sad Face Sticker">
+        <img src="assets/Svg's/Start with Logic.svg" alt="Start with logic Sticker">
+        <img src="assets/Svg's/Yesss.svg" alt="Yes Sticker">
     </article>
     
 </body>

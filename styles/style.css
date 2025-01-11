@@ -1,0 +1,314 @@
+:root {
+    /* background color */
+    --background-color-dark: #000;
+    --background-color-light: #FFF;
+
+    /* selection color */
+    --color-1: #0064FF;
+    --color-2: #FFc852;
+    --color-3: #FF7A41;
+    --color-4: #A560FF;
+    --color-5: #00C46D;
+    --color-6: #F3A0D6;
+
+    /* fonts */
+    --general-font-1: Antique Legacy;
+    --general-font-2: Antique-light;
+    --logo-font Parabole ;
+
+    /* font sizes */
+    --f1: 120px;
+    --f2: 91px;
+    --f3: 26px;
+    --f4: 24px;
+    --f5: 20px;
+    --f6: 18px;
+
+    /* general */
+    --border-radius: 30px;
+    --animation-duration: 0.3s;
+}
+
+* {
+    background-color: var(--background-color-dark);
+    margin: 1em;
+}
+
+body {
+    font-family: Antique Legacy;
+    background: transparent;
+}
+
+
+/* header */
+
+.logo {
+    color: var( --background-color-light);
+    position: absolute;
+    z-index: 2;
+    top: 5%;
+    left: 5%;
+}
+
+.breadandbutter img:nth-child(1) {
+    display: none;
+}
+
+.breadandbutter {
+    display: flex;
+    top: 1em;
+
+}
+
+header {
+    height: 1vh;
+}
+
+header img {
+    position: absolute;
+    left: 2em;
+    top: 1em;
+}
+
+.header button {
+    background-color: var(--color-1);
+}
+
+/* toggleswitch */
+
+.theme {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;    
+}
+
+.theme-toggle {
+    z-index: 1;
+}
+
+.theme-label,
+.theme-toggle,
+.theme-toggle-wrap {
+    position: relative;
+}
+
+.theme-toggle,
+.theme-toggle:before {
+    display: block;
+}
+
+.theme-toggle {
+    background-color: var(--color-1);
+    border-radius: var(--border-radius);
+    padding: 0.25em;
+    width: 6em;
+    height: 3em;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: toggleani var(--animation-duration) ease-in,
+    toggleopacity var(--animation-duration) ease-in,
+    transform var(--animation-duration) ease-in;
+}
+
+.theme-toggle:before {
+    background-color: var(--color-3);
+    border-radius: var(--border-radius);
+    content: "";
+    width: 2.5em;
+    height: 2.5em;
+    transition: var(--animation-duration);
+}
+
+.theme-toggle:focus {
+    outline: transparent;
+}
+
+.theme-toggle:checked {
+    background-color: var(--color-5);
+}
+
+.theme-toggle:checked:before,
+.theme-toggle:checked ~ .theme-icon {
+    transform: translateX(3em);
+}
+
+
+.theme-toggle:checked ~ .theme-fill {
+    transform: translateX(0);
+}
+
+.theme-toggle:checked ~ .theme-icon .theme-icon-part ~ .theme-icon-part {
+    opacity: 0;
+}
+
+.moonicon {
+    display:block;
+    position: absolute;
+    z-index: 2;
+    width: 24px;
+    top: 10px;
+    right: 15px;
+    color: var(--color-3);
+}
+
+.sunicon {
+    display: none;
+}
+
+.moonicon:checked {
+    display: none;
+}
+
+.sunicon:checked {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 24px;
+    top: 10px;
+    right: 15px;
+}
+
+body section:nth-child(1) {
+    align-items: center;
+}
+
+body section:nth-child(3) h1 {
+    font-size: var(--f2);
+    color: var(--color-2);
+    text-align: left;
+}
+
+body section:nth-child(3) h1 span {
+    font-size: var(--f2);
+    color: var(--color-3);
+    text-align: left;
+}
+
+span {
+    font-family: Parabole;
+}
+
+p {
+    color: var(--background-color-light);
+}
+
+h2 {
+    color: var(--background-color-light);
+}
+
+h1 {
+    color: var(--background-color-light);
+}
+
+
+/* slideshow banner */
+.banner {
+    position: relative;
+    height: 25em;
+    width: 120%;
+    left: -10em;
+    top: -3em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--background-color-light);
+}
+
+.slideshowfront {
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 20s infinite;
+}
+
+
+/* bread and butter logo */
+.breadandbutter img:nth-child(1) {
+    display: none;
+    position: absolute;
+    right: 50%;
+    z-index: 2;
+}
+
+.breadandbutter img:nth-child(1).on {
+    display: block;
+
+}
+
+.breadandbutter img:nth-child(2) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    z-index: 2;
+}
+
+.breadandbutter img:nth-child(2).off {
+    display: none;
+}
+
+
+
+body section {
+    background-color: var(--background-color-dark);
+}
+
+.stickerselection {
+    display: none;
+}
+
+.quote {
+    position: fixed;
+    width: 20%;
+}
+
+
+.fotocarrousel img {
+    position: absolute;
+    width: 9em;
+    overflow: hidden;
+}
+
+
+@keyframes slideshow {
+    0%, 9%{
+        background-image: url("../assets/Images/0a090e44-2dbc-4675-a7ac-ae48399152b2.JPG");
+    }
+
+    10%, 19%{
+        background-image: url("../assets/Images/1aa98921-a025-4ee3-a34c-808cdfea5533.JPG");
+    }
+    
+    20%, 29% {
+        background-image: url("../assets/Images/1cd49476-e5b4-441a-9373-59b9d6469489.JPG");
+    }
+
+    30%, 39% {
+        background-image: url("../assets/Images/4ee27e5b-c719-4d25-b718-e815a5aac952.JPG");
+    }
+
+    40%, 49% {
+        background-image: url("../assets/Images/4f3858a1-4599-4bd7-9325-164715a760b8.JPG");
+    }
+
+    50%, 59% {
+        background-image: url("../assets/Images/59ff4d18-363f-4ae9-bfac-c07a89d65514.JPG");
+    }
+
+    60%, 69% {
+        background-image: url("../assets/Images/a31863f5-ab8d-4261-bec0-00ee5cab3ebf.JPG");
+    }
+
+    70%, 79% {
+        background-image: url("../assets/Images/bb089490-7800-44b8-a39a-38845efc7642.JPG")
+    }
+
+    100% {
+        background-image: url("../assets/Images/de44e76e-a491-47d3-b3c2-ab071a32952f.JPG");
+    }
+}
