@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bread and Butter</title>
+    <title> Bread and Butter</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/Overig/favicon.png">
+
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/stylesheet.css">
 
     <script src="script/script.js" defer></script>
 </head>
-<header>
-    
-    <img src="assets/Overig/just-logo.svg" class="logo">
 
-
-    <!-- source universe.io -->
-    <label for="theme" class="theme">
-            <input id="theme" class="theme-toggle"
-            type="checkbox" role="switch" name="theme" value="dark">
-            </span>
-            <!-- waarom worden deze niet transparant op de achtergrond? -->
-            <img src="assets-student/moon.svg" class="moonicon">
-            <img src="assets-student/sun.svg" class="sunicon">
-        </span>
-    </label>
-
-</header>
 <body>
+
+    <header>
+    
+        <img src="assets/Overig/just-logo.svg">
+    
+    
+        <!-- source universe.io -->
+        <label for="theme" class="theme">
+                <input id="theme" class="theme-toggle"
+                type="checkbox" role="switch" name="theme" value="dark">
+                </span>
+                <!-- waarom worden deze niet transparant op de achtergrond? -->
+                <img src="assets-student/moon.svg" class="moonicon">
+                <img src="assets-student/sun.svg" class="sunicon">
+            </span>
+        </label>
+    
+    </header>
 
     <section class="banner">
             <!-- slideshow front page -->
@@ -36,6 +41,9 @@
     <div class="breadandbutter">
         <img src="assets/Overig/b&b-black.svg">
         <img src="assets/Overig/b&b-white.svg">
+
+        <div class="blackspace"></div>
+
     </div>
     </section>
 
@@ -53,9 +61,8 @@
     <section class="quote">
         <h2>Digital Accessibility improves the experience for all users, not just those with disabilities.</h2>
             <p>Tizian Fendt, UX designer at JUST</p>
-
-            <img class="quote" src="assets-student/61ffd1e68159f61573be4a90_portfolio-hero.jpg" alt="Tizian Fendt, UX Designer staat met een microfoon">
-    </section>
+            <img class="sample" src="assets-student/61ffd1e68159f61573be4a90_portfolio-hero.jpg">
+        </section>
 
     <section>
         <h2> Why we need a minset shift </h2>
@@ -65,11 +72,11 @@
                 Ultimately, by embracing accessibility, you not only foster inclusivity but also enjoy higher conversion rates, as more users can engage seamlessly with your content or services.</p>
     </section>
 
-    <section>
+    <section class="next-events">
         <h2>Join our next events</h2>
             <p>Do you want to join our next Bread & Butter event? Leave your email and we’ll keep you up to date.</p>
 
-            <form>
+            <form class="email">
                 <label for="email"> Enter your Email</label>
                 <input type="email" name="email" id="email" required >
             </form>
@@ -108,8 +115,8 @@
 
 
 <footer>
-    <p>hello@just.agency</p>
-    <p>+31 (0)88 587 8000</p>
+    <a href="mailto:hello@just.agency.com">hello@just.agency.com </a>
+    <a href="callto:+31 (0)88 587 8000">+31 (0)88 587 8000 </a>
 </footer>
 
 </html>
