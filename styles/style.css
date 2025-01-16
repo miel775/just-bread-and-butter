@@ -39,8 +39,12 @@ body {
     background: transparent;
     background-color: var(--background-color-dark);
     margin: 1em;
-    
 }
+
+body.lightmode {
+    background-color: var(--background-color-light);
+}
+
 
 
 /* header */
@@ -56,30 +60,23 @@ body {
 
 .breadandbutter {
     position: absolute;
-    min-width: 50em;
-    left: 30em;
-    top: 15em;
+    min-width: 50%;
+    left: 40%;
+    top: 15%;
     z-index: 2;
-   
-}
-
-.blackspace {
-    position: absolute;
-    background-color: var(--background-color-dark);
-    min-width: 130em;
-    height: 13em;
-    z-index: -1;
-    top: 12em;
-    left: -50em;
 }
 
 .breadandbutter img:nth-child(1) {
     display: none;
 }
 
-.breadandbutter img:nth-child(2) {
-    display: block;
-    animation: turnaround var(--animation-duration) infinte;
+.logo-darkmode {
+    animation: turnaround 18s infinite;
+}
+
+
+.logo-lightmode {
+    animation: turnaround 18s infinite;
 }
 
 
@@ -89,7 +86,7 @@ body {
     }
 
     100% {
-        transform: rotate(360);
+        transform: rotate(360deg);
     }
 }
 
@@ -185,7 +182,28 @@ header img {
 }
 
 .moonicon:hover {
-    animation: hovericon var(--animation-duration) ease-in-out;
+    animation: hovericon var(--animation-duration) infinite;
+}
+
+.sunicon:hover {
+    animation: hovericon var(--animation-duration) infinite;
+}
+
+
+.moonicon.after {
+    animation: dissolve var(--animation-duration) ease-in-out;
+}
+
+@keyframes dissolve {
+    from {
+        transform: 0;
+        opacity: 100;
+    }
+
+    to {
+        transform: 5em;
+        opacity: 0;
+    }
 }
 
 @keyframes hovericon {
@@ -202,23 +220,30 @@ header img {
 
 .sunicon {
     display: none;
+
 }
 
-.moonicon:checked {
-    display: none;
-}
-
-.sunicon:checked {
+.sunicon.lightmode {
     display: block;
     position: absolute;
     z-index: 2;
-    width: 24px;
-    top: 10px;
-    right: 15px;
+    width: 20px;
+    top: 0.8em;
+    left: 3.4em;
+    color: var(--color-3);
 }
+
+.moonicon.lightmode {
+    display: none;
+}
+
 
 body section:nth-child(1) {
     align-items: center;
+}
+
+body section:nth-child(1) h1 {
+    font-size: var(--f1);
 }
 
 body section:nth-of-type(2) p {
@@ -245,6 +270,7 @@ body section:nth-child(3) h1 span {
 
 span {
     font-family: Parabole;
+    color: var(--color-1);
 }
 
 p {
@@ -264,33 +290,28 @@ h1 {
 /* slideshow banner */
 .banner {
     position: relative;
-    height: 40em;
-    width: 120%;
-    left: -10em;
-    top: -3em;
+    height: 30em;
+    width: 100%;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--background-color-light);
 }
 
 .slideshowfront {
-    position: absolute;
+    object-fit: cover;
     width: 120%;
     height: 40em;
     background-size: cover;
-    background-position: center;
-    animation: slideshow 20s infinite;
+    z-index: -1;
+    animation: slideshow 30s infinite;
 }
 
 
 /* bread and butter logo */
 .breadandbutter img:nth-child(1) {
     display: none;
-    position: absolute;
+    position: relative;
     right: 50%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .breadandbutter img:nth-child(1).on {
@@ -299,10 +320,9 @@ h1 {
 }
 
 .breadandbutter img:nth-child(2) {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    position: absolute;
+    right: 50%;
+    width: 72%;
     z-index: 2;
 }
 
@@ -312,29 +332,59 @@ h1 {
 
 
 
-body section {
+section {
     background-color: var(--background-color-dark);
 }
 
+section.lightmode {
+    background-color: var(--background-color-light);
+    color: var(--background-color-dark);
+}
+
 section:nth-of-type(2) {
-    margin-left: 2em;
+    padding: 5%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+section:nth-of-type(2) h1 {
+    margin-left: 0.5%;
 }
 
 section:nth-of-type(3) {
-    margin: 5em;
-}
-
-section:nth-of-type(5) {
-    margin: 5em;
+    padding: 5%;
+    margin-right: 10%;
 }
 
 section:nth-of-type(3) h2 {
     color: var(--color-4);
-    font-size: var(--f3);
+    font-size: var(--f2);
 }
 
+section:nth-of-type(3) p {
+    margin-top: -1%;
+}
+
+
+section:nth-of-type(5) {
+    padding: 5%;
+    margin-left: 10%;
+}
+
+section:nth-of-type(5) h2 {
+    color: var(--color-5);
+    font-size: var(--f2);
+}
+
+section:nth-of-type(5) p {
+    margin-top: -4%;
+}
+
+
+
 section:nth-of-type(6) {
-    margin-left: 2em;
+    padding: 5%;
+    margin-right: 10%;
 }
 
 section:nth-of-type(6) h2 {
@@ -349,25 +399,40 @@ section:nth-of-type(6) h2 {
 
 
 .quote h2 {
-    position: absolute;
-    margin-top: 4em;
-    margin-left: 3em;
     width: 15em;
-    z-index: 2;
+
+}
+
+.quote p {
+    width: 20em;
+}
+
+.textballoon {
+    background-color: var(--background-color-dark);
+    padding: 2em;
+    position:absolute;
+    top: 230%;
+    left: 10%;
+    border-radius: 1em;
 }
 
 .sample {
     background-position: -400px -100px;
     width: 100%;
-    height: 15em;
+    height: 25em;
     object-fit: cover;
 }
 
+
 .email {
     display: flex;
-    margin-left: 1em;
     font-size: var(--f3);
     color: var(--color-2);
+    margin-top: 1em;
+}
+
+.email label {
+    margin-top: 0.4em;
 }
 
 .email input {
@@ -430,5 +495,39 @@ footer a:nth-of-type(2) {
 
     100% {
         background-image: url("../assets/Images/de44e76e-a491-47d3-b3c2-ab071a32952f.JPG");
+    }
+}
+
+
+/* scroll animations */
+.hidden {
+    opacity: 0;
+    transition: all 0.6s;
+    animation: fromtherleft 1s ease-in;
+}
+
+.show {
+    opacity: 1;
+    transition: all 0.6s;
+    animation: fromtheright 1s ease-out;
+}
+
+@keyframes fromtheright {
+    from {
+        translate: -100%;
+    }
+
+    to {
+        translate: 0%;
+    }
+}
+
+@keyframes fromtheleft {
+    from {
+        translate: 0%;
+    }
+
+    to {
+        translate: 100%;
     }
 }
