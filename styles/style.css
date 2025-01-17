@@ -41,9 +41,6 @@ body {
     margin: 1em;
 }
 
-body.lightmode {
-    background-color: var(--background-color-light);
-}
 
 
 
@@ -78,6 +75,8 @@ body.lightmode {
 .logo-lightmode {
     animation: turnaround 18s infinite;
 }
+
+
 
 
 @keyframes turnaround {
@@ -223,19 +222,8 @@ header img {
 
 }
 
-.sunicon.lightmode {
-    display: block;
-    position: absolute;
-    z-index: 2;
-    width: 20px;
-    top: 0.8em;
-    left: 3.4em;
-    color: var(--color-3);
-}
 
-.moonicon.lightmode {
-    display: none;
-}
+
 
 
 body section:nth-child(1) {
@@ -331,16 +319,6 @@ h1 {
 }
 
 
-
-section {
-    background-color: var(--background-color-dark);
-}
-
-section.lightmode {
-    background-color: var(--background-color-light);
-    color: var(--background-color-dark);
-}
-
 section:nth-of-type(2) {
     padding: 5%;
     margin-left: 10%;
@@ -400,7 +378,6 @@ section:nth-of-type(6) h2 {
 
 .quote h2 {
     width: 15em;
-
 }
 
 .quote p {
@@ -412,9 +389,12 @@ section:nth-of-type(6) h2 {
     padding: 2em;
     position:absolute;
     top: 230%;
-    left: 10%;
+    right: 65%;
+    left: 5%;
     border-radius: 1em;
 }
+
+
 
 .sample {
     background-position: -400px -100px;
@@ -515,19 +495,64 @@ footer a:nth-of-type(2) {
 @keyframes fromtheright {
     from {
         translate: -100%;
+        filter:blur(1em);
     }
 
     to {
         translate: 0%;
+        filter:blur(0em);
     }
 }
 
 @keyframes fromtheleft {
     from {
         translate: 0%;
+        filter:blur(1em);
     }
 
     to {
         translate: 100%;
+        filter:blur(0em);
     }
 }
+
+/* lightmode */
+
+body.lightmode {
+    background-color: var(--background-color-light);
+    color: var(--background-color-dark);
+}
+
+.moonicon.lightmode {
+    display: none;
+}
+
+.breadandbutter img.lightmode {
+    filter: invert(100%);
+}
+
+.sunicon.lightmode {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    top: 0.8em;
+    left: 3.4em;
+    color: var(--color-3);
+}
+
+p.lightmode {
+    color: var(--background-color-dark);
+}
+
+h2.lightmode {
+    color: var(--background-color-dark);
+}
+
+.textballoon.lightmode {
+    background-color: var(--background-color-light);
+    color: var(--background-color-dark);
+}
+
+
+
