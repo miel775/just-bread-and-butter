@@ -1,15 +1,27 @@
 :root {
-    /* background color */
-    --background-color-dark: #000;
-    --background-color-light: #FFF;
+    color-scheme: dark light;
 
-    /* selection color */
-    --color-1: #0064FF;
-    --color-2: #FFc852;
-    --color-3: #FF7A41;
-    --color-4: #A560FF;
-    --color-5: #00C46D;
-    --color-6: #F3A0D6;
+    /* background color */
+    --background-color-dark: #0D0D0D;
+    --background-color-light: #FEFEFE;
+
+
+    /* selection color on light */
+    --color-l1: #132c50;
+    --color-l2: #32250b;
+    --color-l3: #4a1600;
+    --color-l4: #A560FF;
+    --color-l5: #00C46D;
+    --color-l6: #F3A0D6;    
+
+
+    /* selection color on dark */
+    --color-d1: #0064FF;
+    --color-d2: #FFc852;
+    --color-d3: #FF7A41;
+    --color-d4: #A560FF;
+    --color-d5: #00C46D;
+    --color-d6: #F3A0D6;
 
     /* fonts */
     --general-font-1: Antique Legacy;
@@ -31,27 +43,35 @@
 
 * {
     text-decoration: none;
+
 }
+
 
 
 body {
+    color-scheme: light dark;
     font-family: Antique Legacy;
-    background: transparent;
-    background-color: var(--background-color-dark);
     margin: 1em;
+    background-color: var(--background-color-dark);
+    color: var(--background-color-light);
 }
 
-
-
+body.lightmode {
+    background-color: var(--background-color-light);
+    color: var(--background-color-dark);
+}
 
 /* header */
-
 .logo {
-    color: var( --background-color-light);
+    color: var(--background-color-light);
     position: absolute;
     z-index: 2;
     top: 5%;
     left: 5%;
+}
+
+.logo.lightmode {
+    color: var(--background-color-dark);
 }
 
 
@@ -63,9 +83,6 @@ body {
     z-index: 2;
 }
 
-.breadandbutter img:nth-child(1) {
-    display: none;
-}
 
 .logo-darkmode {
     animation: turnaround 18s infinite;
@@ -98,13 +115,18 @@ header img {
 }
 
 .header button {
-    background-color: var(--color-1);
+    background-color: var(--color-d1);
+}
+
+.header button.lightmode {
+    background-color: var(--color-l1);
 }
 
 /* toggleswitch */
 
 .theme {
     position: absolute;
+    object: fixed;
     top: 5%;
     right: 5%;
     align-items: center;
@@ -127,7 +149,7 @@ header img {
 }
 
 .theme-toggle {
-    background-color: var(--color-1);
+    background-color: var(--color-d1);
     border-radius: var(--border-radius);
     padding: 0.25em;
     width: 6em;
@@ -140,7 +162,7 @@ header img {
 }
 
 .theme-toggle:before {
-    background-color: var(--color-3);
+    background-color: var(--color-d3);
     border-radius: var(--border-radius);
     content: "";
     width: 2.5em;
@@ -153,7 +175,11 @@ header img {
 }
 
 .theme-toggle:checked {
-    background-color: var(--color-5);
+    background-color: var(--color-d5);
+}
+
+.theme-toggle:checked.lightmode {
+    background-color: var(--color-l5);
 }
 
 .theme-toggle:checked:before,
@@ -177,7 +203,26 @@ header img {
     width: 20px;
     top: 0.8em;
     left: 0.9em;
-    color: var(--color-3);
+    color: var(--color-d3);
+}
+
+.moonicon.lightmode {
+    color: var(--color-l3);
+    animation: dissolve 2s ease-in;
+}
+
+.sunicon {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    top: 0.8em;
+    left: 3.4em;
+    color: var(--color-d3);
+}
+
+.sunicon.lightmode {
+    color: var(--color-l3);
 }
 
 .moonicon:hover {
@@ -189,7 +234,7 @@ header img {
 }
 
 
-.moonicon.after {
+.moonicon.lightmode {
     animation: dissolve var(--animation-duration) ease-in-out;
 }
 
@@ -217,21 +262,12 @@ header img {
 
 }
 
-.sunicon {
-    display: none;
-
-}
-
-
-
-
-
 body section:nth-child(1) {
     align-items: center;
 }
 
-body section:nth-child(1) h1 {
-    font-size: var(--f1);
+body section:nth-of-type(2) h1 {
+    font-size: var(--f2);
 }
 
 body section:nth-of-type(2) p {
@@ -246,27 +282,47 @@ body section:nth-of-type(2) p:nth-of-type(2) {
 
 body section:nth-child(3) h1 {
     font-size: var(--f2);
-    color: var(--color-2);
+    color: var(--color-d2);
     text-align: left;
+}
+
+body section:nth-child(3) h1.lightmode {
+    color: var(--color-l2);
 }
 
 body section:nth-child(3) h1 span {
     font-size: var(--f2);
-    color: var(--color-3);
+    color: var(--color-d3);
     text-align: left;
+}
+
+body section:nth-child(3) h1 span.lightmode {
+    color: var(--color-l3);
 }
 
 span {
     font-family: Parabole;
-    color: var(--color-1);
+    color: var(--color-d1);
+}
+
+span.lightmode {
+    color: var(--color-l1);
 }
 
 p {
     color: var(--background-color-light);
 }
 
+p.lightmode {
+    color: var(--background-color-dark);
+}
+
 h2 {
     color: var(--background-color-light);
+}
+
+h2.lightmode {
+    color: var(--background-color-dark);
 }
 
 h1 {
@@ -274,14 +330,25 @@ h1 {
     margin: auto;
 }
 
+h1.lightmode {
+    color: var(--background-color-dark);
+}
+
+
 
 /* slideshow banner */
 .banner {
     position: relative;
-    height: 30em;
-    width: 100%;
-    overflow: hidden;
+    height: 30em; /* Zorg dat de hoogte specifiek is */
+    width: 83%; /* Neem de volledige breedte */
+    object-fit: cover; /* Zorg dat de inhoud netjes gevuld is */
     color: var(--background-color-light);
+    margin: 0; /* Verwijder eventuele externe marges */
+    padding: 0; 
+}
+
+.banner.lightmode {
+    color: var(--background-color-dark);
 }
 
 .slideshowfront {
@@ -294,29 +361,18 @@ h1 {
 }
 
 
-/* bread and butter logo */
-.breadandbutter img:nth-child(1) {
-    display: none;
-    position: relative;
-    right: 50%;
-    z-index: 3;
-}
-
-.breadandbutter img:nth-child(1).on {
-    display: block;
-
-}
-
-.breadandbutter img:nth-child(2) {
+.breadandbutter img {
     position: absolute;
     right: 50%;
     width: 72%;
     z-index: 2;
 }
 
-.breadandbutter img:nth-child(2).off {
-    display: none;
+
+.breadandbutter img.lightmode {
+    filter: invert(100%);
 }
+
 
 
 section:nth-of-type(2) {
@@ -329,15 +385,6 @@ section:nth-of-type(2) h1 {
     margin-left: 0.5%;
 }
 
-section:nth-of-type(3) {
-    padding: 5%;
-    margin-right: 10%;
-}
-
-section:nth-of-type(3) h2 {
-    color: var(--color-4);
-    font-size: var(--f2);
-}
 
 section:nth-of-type(3) p {
     margin-top: -1%;
@@ -377,7 +424,7 @@ section:nth-of-type(6) h2 {
 
 
 .quote h2 {
-    width: 15em;
+    width: 7em;
 }
 
 .quote p {
@@ -388,17 +435,15 @@ section:nth-of-type(6) h2 {
     background-color: var(--background-color-dark);
     padding: 2em;
     position:absolute;
-    top: 230%;
+    top: 290%;
     right: 65%;
     left: 5%;
     border-radius: 1em;
 }
 
 
-
 .sample {
-    background-position: -400px -100px;
-    width: 100%;
+    width: 122%;
     height: 25em;
     object-fit: cover;
 }
@@ -516,43 +561,22 @@ footer a:nth-of-type(2) {
     }
 }
 
-/* lightmode */
 
-body.lightmode {
-    background-color: var(--background-color-light);
-    color: var(--background-color-dark);
-}
+@keyframes dissolve {
+    from {
+        scale: 1;
+    }
 
-.moonicon.lightmode {
-    display: none;
-}
-
-.breadandbutter img.lightmode {
-    filter: invert(100%);
-}
-
-.sunicon.lightmode {
-    display: block;
-    position: absolute;
-    z-index: 2;
-    width: 20px;
-    top: 0.8em;
-    left: 3.4em;
-    color: var(--color-3);
-}
-
-p.lightmode {
-    color: var(--background-color-dark);
-}
-
-h2.lightmode {
-    color: var(--background-color-dark);
-}
-
-.textballoon.lightmode {
-    background-color: var(--background-color-light);
-    color: var(--background-color-dark);
+    to  {
+        scale: 0;
+    }
 }
 
 
-
+/* media queries */
+@media only screen and (max-width: 600px) {
+    .textballoon {
+      top: 390%;
+      right: 20%;
+    }
+  }
