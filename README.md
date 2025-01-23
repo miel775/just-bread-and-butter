@@ -1,5 +1,7 @@
 # Bread and Butter Website
-![Bread and Butter](https://github.com/user-attachments/assets/e87e79ad-0606-4857-9494-3d50960e0114)
+
+![Bread and Butter](https://github.com/user-attachments/assets/026f4940-9f18-4f51-a219-054bc690ceec)
+
 
 ## Beschrijving
 Bread and butter is een event dat is gehouden in November 2024 waarbij kennis wordt gedeeld met klanten en gastsprekers. Het gaat over goede toegankelijkheid van websites. Er komt een one-pager waar overzichtelijk staat over het event dat heeft plaatsgevonden. 
@@ -58,6 +60,27 @@ Ook is er een email input gezet in het ontwerp hier kunnen eventuele toekomstige
 
 
 <h2>Accesibility test</h2>
+<p>Aangezien het belangrijk is dat de website toegankelijk is voor iedereen wordt er een Lighthouse test uitgevoerd op de website maar niet voordat we door de eisen gaan van de briefing.</p>
+
+<h3>Tabben door Content</h3>
+<p>Door de functie "tabindex" is het mogelijk om door de content te navigeren met alleen toetsenbord.</p>
+
+![image](https://github.com/user-attachments/assets/41c95fb7-5d54-4e46-8346-7ee0bc7b6f71)
+
+<h3>Kleurblindheid test</h3>
+<p>Ook is er rekening gehouden met de kleurblindheid. In de test staat dat groen niet goed samengaat met een donkere achtergrond dus het groen is uit de color-palette gehaald op de stickers na. Er zijn veel verschillende soorten kleurenblindheid. Hier gebruik ik de bron AcessCSS. Hier kan ik dan drie filters toepassen op de website CSS zones, Greyscale en Colorblindfilter. Dit moet gedaan worden met een speciale variant ".scss". Dit is wat om later uit te zoeken echter ga ik gebruik maken avn de CSS zones en de greyscale. Op de header staan buttons om dit in te schakelen.</p>
+
+![image](https://github.com/user-attachments/assets/d385f338-3b71-4250-a345-51b2d0ab4487)
+
+<h3>Lighthousetest</h3>
+<p>Voor de lighthouse test scoort de website 80%. Enkele goede punten zijn dat de language Engels is van de pagina, ARIA roles en alle elementen hebben een toegankelijke naam. Echter ontbreken er een aantal alt teksten bij de image. Ook is de 'tabindex' niet volledig in order omdat deze optelt 1..2...3 terwijl het 1 moet blijven.</p>
+
+![image](https://github.com/user-attachments/assets/71d51d94-e81b-4b1f-8b32-127195a5abd9)
+
+
+
 ## Bronnen
+
+- AcesCSS https://lukyvj.github.io/accecss/
 
 
