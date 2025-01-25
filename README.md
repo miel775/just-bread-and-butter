@@ -80,7 +80,7 @@ Dan wordt in de classlist .lightmode gebruikt omdat het in general in darkmode s
 
 https://github.com/miel775/just-bread-and-butter/blob/8d43388d6c032393d46103cd23d5c20c8c75ddf1/script/script.js#L22-L24
 
-<h2>Accesibility test</h2>
+<h2>Accessibility test</h2>
 <p>Aangezien het belangrijk is dat de website toegankelijk is voor iedereen wordt er een Lighthouse test uitgevoerd op de website maar niet voordat we door de eisen gaan van de briefing.</p>
 
 <h3>Tabben door Content</h3>
