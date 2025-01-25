@@ -40,24 +40,45 @@ Ook is er een email input gezet in het ontwerp hier kunnen eventuele toekomstige
 <h3>Ademruimte en Inspringen</h3>
 <p>In de HTML is er conventie toegepast. Dit voor een overzichtelijke HTML wat helpt met makkelijk coderen. Alle elementen worden per enter in een rij gezet zodat je ziet welke elementen in wat staan. Zo zijn de hoofdelementen: body en head en hier vallen header, sections en footer in </p>
 
-![image](https://github.com/user-attachments/assets/89bd66d0-2ba4-43f6-bf9f-b26f364dd064)
+https://github.com/miel775/just-bread-and-butter/blob/8d43388d6c032393d46103cd23d5c20c8c75ddf1/index.html#L69-L72
 
 <h3>Volgorde en Nesten van CSS</h3>
 <p>De volgorde van de CSS staan op volgorde hoe de HTML is opgebouwd. Hierbij staan de grote elementen bovenaan zoals de body en *. Ook staan de keyframes helemaal onderaan zodat deze altijd worden uitgevoerd wanneer ze worden benoemd in een class. Alle classes in een specifieke class zijn genest in het hoofdelement zo wordt de h1 van een sectie benoemd in de body class.</p>
 
-![image](https://github.com/user-attachments/assets/74a6229e-1641-4a46-a1b6-741f5cef0d5e)
-
 <h3>Media Queries</h3>
-<p>Media Queries worden genest in de class zelf</p>
+<p>Media Queries worden genest op het laatst</p>
 
-![image](https://github.com/user-attachments/assets/e2f20438-8c29-43f6-ab82-7ccffdf31cd8)
-
+https://github.com/miel775/just-bread-and-butter/blob/8d43388d6c032393d46103cd23d5c20c8c75ddf1/styles/style.css#L958-L1020
 
 <h3>Naamgeving</h3>
 <p>De naamgeving wordt als kebabcase gebruikt. In de custom CSS properties zie je dat dit is opgesteld per element.</p>
 
-![image](https://github.com/user-attachments/assets/d4426005-b9c7-41c6-bd11-de6f22e072ff)
+https://github.com/miel775/just-bread-and-butter/blob/8d43388d6c032393d46103cd23d5c20c8c75ddf1/styles/style.css#L9-L15
 
+<h3>Interactie</h3>
+
+https://github.com/user-attachments/assets/f875faf8-b3ef-4961-a6ac-90020f6c0944
+
+<p>Je kan met de toggle van dark naar lightmode veranderen en andersom. Een gebruiker wilt de pagina in lightmode zetten dat kan met de toggle of als je mobiel gebruikt een button.</p>
+
+<h4>Feedforward</h4>
+<p>De gebruiker klikt op de toggle knop.</p>
+
+<h4>Feedback</h4>
+<p>De pagina verandert in Light of Dark mode.</p>
+
+<h4>JavaScript</h4>
+Eerst wordt de toggle/button geselecteerd
+
+https://github.com/miel775/just-bread-and-butter/blob/8d43388d6c032393d46103cd23d5c20c8c75ddf1/script/script.js#L15-L16
+
+Dan wordt er een event op gebracht hierbij 'click'.
+
+https://github.com/miel775/just-bread-and-butter/blob/8d43388d6c032393d46103cd23d5c20c8c75ddf1/script/script.js#L19
+
+Dan wordt in de classlist .lightmode gebruikt omdat het in general in darkmode staat.
+
+https://github.com/miel775/just-bread-and-butter/blob/8d43388d6c032393d46103cd23d5c20c8c75ddf1/script/script.js#L22-L24
 
 <h2>Accesibility test</h2>
 <p>Aangezien het belangrijk is dat de website toegankelijk is voor iedereen wordt er een Lighthouse test uitgevoerd op de website maar niet voordat we door de eisen gaan van de briefing.</p>
