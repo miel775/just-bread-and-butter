@@ -86,7 +86,7 @@ https://github.com/miel775/just-bread-and-butter/blob/8d43388d6c032393d46103cd23
 <h3>Tabben door Content</h3>
 <p>Door de functie "tabindex" is het mogelijk om door de content te navigeren met alleen toetsenbord.</p>
 
-![image](https://github.com/user-attachments/assets/41c95fb7-5d54-4e46-8346-7ee0bc7b6f71)
+https://github.com/miel775/just-bread-and-butter/blob/7b45bcac805b351900f2b5bcac48c77885bb1740/index.html#L23-L24
 
 <h3>Kleurblindheid test</h3>
 <p>Ook is er rekening gehouden met de kleurblindheid. In de test staat dat groen niet goed samengaat met een donkere achtergrond dus het groen is uit de color-palette gehaald op de stickers na. Er zijn veel verschillende soorten kleurenblindheid. Hier gebruik ik de bron AcessCSS. Hier kan ik dan drie filters toepassen op de website CSS zones, Greyscale en Colorblindfilter. Dit moet gedaan worden met een speciale variant ".scss". Dit is wat om later uit te zoeken echter ga ik gebruik maken avn de CSS zones en de greyscale. Op de header staan buttons om dit in te schakelen.</p>
